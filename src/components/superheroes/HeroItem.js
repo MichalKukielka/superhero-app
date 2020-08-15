@@ -1,9 +1,8 @@
-import React from 'react'
-import HeroSection from './HeroSection'
+import React from 'react';
+import PropTypes from 'prop-types';
+import HeroSection from './HeroSection';
 
-function HeroItem({ hero }) {
-
-
+const HeroItem = ({ hero }) => {
     return (
         <div className='card'>
             <div className='card-inner'>
@@ -23,6 +22,10 @@ function HeroItem({ hero }) {
                 </div>
             </div>
         </div>)
+}
+
+HeroItem.propTypes = {
+    hero: PropTypes.object.isRequired
 }
 
 export default HeroItem

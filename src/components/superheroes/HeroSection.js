@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
-function HeroSection({ sec, name }) {
+const HeroSection = ({ sec, name }) => {
     return (
         <Fragment>
             <h3>{name}</h3>
@@ -17,6 +18,11 @@ function HeroSection({ sec, name }) {
             }
         </Fragment>
     );
+}
+
+HeroSection.propTypes = {
+    sec: PropTypes.object.isRequired,
+    name: PropTypes.string
 }
 
 export default HeroSection

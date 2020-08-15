@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import HeroItem from './HeroItem';
 
 const HeroesGrid = ({heroes}) => {    
@@ -24,6 +25,11 @@ const HeroesGrid = ({heroes}) => {
     return (
       <Fragment></Fragment>
     );
+}
+
+
+HeroesGrid.propTypes = {
+    heroes: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
 export default HeroesGrid
