@@ -11,8 +11,7 @@ const HeroItem = ({ hero }) => {
                         {
                             backgroundImage: `url(${hero.image.url})`
                         }
-                    }
-                >
+                    }                >
                 <h1>{hero.name}</h1>
                 </div>
                 <div className='card-back'>

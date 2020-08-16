@@ -14,15 +14,4 @@ describe('HeroesGrid component', () => {
         const { getByText } = render(<HeroesGrid heroes={heroes}/>);
         expect(getByText("Try to find another Super Hero")).toBeInTheDocument();
     })
-
-    test("Render Component with empty Super Hero name", async () => {
-        const heroes = {
-            response: "error", 
-            error: "bad name search request"
-        }
-        const { getByText } = render(<HeroesGrid heroes={heroes}/>);
-        expect(getByText("")).toBeInTheDocument();
-    })
-
-
 });
