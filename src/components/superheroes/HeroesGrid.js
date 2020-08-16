@@ -27,9 +27,8 @@ const HeroesGrid = ({heroes}) => {
     );
 }
 
-
 HeroesGrid.propTypes = {
-    heroes: PropTypes.arrayOf(PropTypes.object).isRequired
+    heroes: PropTypes.object.isRequired
 }
 
 export default HeroesGrid

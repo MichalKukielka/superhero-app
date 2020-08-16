@@ -15,6 +15,7 @@ const App = () => {
     const heroInfo = async () => {
       const hero = await axios(`https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/1618520148304501/search/${query}`);
       const result = JSON.parse(hero.request.responseText);
+      console.log(result)
       setHeroes(result);
     };
     heroInfo();
