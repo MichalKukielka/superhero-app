@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function Search({ getQuery }) {
     const [text, setText] = useState('');
-    const onChange = (query) => {
+    const handleChangeQuery = (query) => {
         setText(query);
         getQuery(query);
     }
@@ -15,7 +15,7 @@ function Search({ getQuery }) {
                     className='form-control' 
                     placeholder='Search your favorite hero...' 
                     value={text}
-                    onChange={(e) => onChange(e.target.value)}
+                    onChange={(e) => handleChangeQuery(e.target.value)}
                     autoFocus/>
             </form>
         </div>
