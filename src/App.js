@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import { BASE_URL } from './constants';
 import './App.css';
 import Header from './components/ui/Header';
 import Search from './components/ui/Search';
@@ -17,7 +17,7 @@ const App = () => {
     const heroInfo = async () => {
       let cancel
       const hero = await axios(
-        `https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/1618520148304501/search/${query}`,
+        BASE_URL + query,
         { cancelToken: new axios.CancelToken(c => cancel = c)}
         );
       const result = JSON.parse(hero.request.responseText);

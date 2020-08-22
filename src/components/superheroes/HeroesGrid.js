@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { RESPONSE, ERROR_CODE } from '../../constants'
 import HeroItem from './HeroItem';
 
@@ -22,9 +22,7 @@ const HeroesGrid = ({heroes}) => {
         );
     }
 
-    return (
-      <Fragment></Fragment>
-    );
+    return null
 }
 
 export default HeroesGrid
