@@ -22,7 +22,7 @@ const HeroSection = ({ sec, name }) => {
 
 HeroSection.propTypes = {
     sec: PropTypes.object.isRequired,
-    name: PropTypes.string
+    name: PropTypes.string.isRequired
 }
 
 export default HeroSection
